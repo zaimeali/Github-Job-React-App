@@ -6,6 +6,9 @@ import useFetchJobs from './useFetchJobs';
 // Bootstrap
 import { Container } from 'react-bootstrap';
 
+// Component
+import Job from './Job'
+
 function App() {
 
   const [params, setParams] = useState({});
@@ -17,7 +20,13 @@ function App() {
     <Container>
       { loading && <h1>Loading...</h1> }
       { error && <h1>Error.. Try Refreshing.</h1> }
-      <h1>{ jobs.length }</h1>
+      {
+        jobs.map(job => {
+          return (
+            <Job key={ job.id } job={ job } />
+          )
+        })
+      }
     </Container>
   );
 }
