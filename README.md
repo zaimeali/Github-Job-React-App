@@ -1,6 +1,7 @@
 ## Packages
 1) Axios
 2) React Bootstrap
+3) React Markdown
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
